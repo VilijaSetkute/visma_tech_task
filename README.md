@@ -5,7 +5,7 @@ Simple page created using HTML, CSS< JavaScript
 ## Requirements:
 ### Left side
 
--  https://picsum.photos List images
+-  https://picsum.photos List images API used
 -  Preview has a scrollbar
 -  On image click, image appears on Right pane
 -  Infinite scroll implemented
@@ -16,3 +16,5 @@ Simple page created using HTML, CSS< JavaScript
 - filters persists on new image loaded
 - image information added
 - browser scrollbar removed
+
+###### No third party libraries, solutions used
