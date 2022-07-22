@@ -20,6 +20,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.text-bold {
+    font-weight: bold;
+}
+
 /* ==================== ELEMENTS ==================== */
 
 .container {

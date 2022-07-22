@@ -41,7 +41,7 @@ leftPane.addEventListener('scroll', () => {
 const showImages = () => {
     filterImage.src = `${allImages[0].download_url}`
     imageAuthor.innerText = `Author: ${allImages[0].author}`
-    imageDimentions.innerText = `Width x Height: ${allImages[0].width} px x ${allImages[0].height} px`
+    imageDimentions.innerText = `${allImages[0].width} px x ${allImages[0].height} px`
 
     allImages.forEach(singleImage => {
         const newImage = document.createElement('div')
@@ -55,8 +55,8 @@ const showImages = () => {
         newImage.setAttribute('oncontextmenu', 'return false')
         newImage.onclick = () => {
             filterImage.src = `${singleImage.download_url}`
-            imageAuthor.innerText = `Author: ${singleImage.author}`
-            imageDimentions.innerText = `Width x Height: ${singleImage.width} px x ${singleImage.height} px`
+            imageAuthor.innerText = `${singleImage.author}`
+            imageDimentions.innerText = `${singleImage.width} px x ${singleImage.height} px`
         }
         imageGallery.appendChild(newImage)
     });
