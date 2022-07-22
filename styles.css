@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* ==================== GENERAL ==================== */
+
+.d-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.p10 {
+    padding: 10px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* ==================== ELEMENTS ==================== */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.toolbar {
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    background-color: blue;
+    color: white;
+}
+
+.toolbar h3 {
+    line-height: 20px;
+    margin: 0;
+
+}
+
+.left-pane {
+    width: 220px;
+    height: calc(100vh - 110px);
+    margin: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.left-pane img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.left-pane::-webkit-scrollbar {
+    width: 4px;
+}
+
+.left-pane::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.left-pane::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 50px;
+}
+
+.right-pane {
+    width: calc(100vw - 240px);
+    height: calc(100vh - 110px);
+    margin: 10px 10px 10px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-pane div img {
+    max-height: calc(100vh - 210px);;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+}
+
+.dot-flashing {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: lightgrey;
+    color: lightgrey;
+    animation: dotFlashing 1s infinite linear alternate;
+    animation-delay: .5s;
+  }
+  
+  .dot-flashing::before, .dot-flashing::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  
+  .dot-flashing::before {
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: lightgrey;
+    color: lightgrey;
+    animation: dotFlashing 1s infinite alternate;
+    animation-delay: 0s;
+  }
+  
+  .dot-flashing::after {
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: lightgrey;
+    color: lightgrey;
+    animation: dotFlashing 1s infinite alternate;
+    animation-delay: 1s;
+  }
+  
+  @keyframes dotFlashing {
+    0% {
+      background-color: dimgrey;
+    }
+    50%,
+    100% {
+      background-color: lightgrey;
+    }
+  }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div>
+            <div class="toolbar">
+               <h3>Visma Front-End Internship Task</h3>
+            </div>
+            <div class="d-flex">
+                <div class="left-pane">
+                    <div class="images"></div>
+                    <div class="loader">
+                        <div class="dot-flashing"></div>
+                    </div>
+                </div>
+                <div class="right-pane">
+                    <div>
+                        <img class="main-picture" src="" alt="picture" oncontextmenu="return false">
+                    </div>
+                    <div class="p10">
+                        <div class="author">Author: bla bla</div>
+                        <div class="dimensions">W x H: 200 x 200</div>
+                    </div>
+                    <div class="p10">
+                        <label>
+                            Grayscale
+                            <input class="grayscale" type="checkbox" onclick="applyImageFilter()">
+                        </label>
+                        <label>
+                            Blur radius
+                            <input class="blur-radius" type="range" min="0" max="10" value="0" onclick="applyImageFilter()">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
